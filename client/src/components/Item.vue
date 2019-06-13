@@ -12,7 +12,7 @@
     <i class="fas fa-minus-circle mr-2" @click="decreaseQuantity"></i>
     <input v-model.number="itemQuantity" class="appearance-none bg-transparent border-none w-4 text-gray-700 py-1 leading-tight focus:outline-none" type="number" min="1" placeholder="Quantity" aria-label="quantity">
     <i class="fas fa-plus-circle ml-2 mr-3" @click="increaseQuantity"></i>
-    <button class="flex-shrink-0 xl:ml-8 md:ml-8 sm:ml-20 lg:ml-1 bg-teal-500 hover:bg-teal-700 border-teal-500 hover:border-teal-700 text-sm border-4 text-white py-1 px-2 rounded" type="button" @click.stop="addToCart(product)" :id="product.id">
+    <button class="flex-shrink-0 xl:ml-8 md:ml-8 sm:ml-20 lg:ml-1 bg-teal-500 hover:bg-teal-700 border-teal-500 hover:border-teal-700 text-sm border-4 text-white py-1 px-2 rounded" type="button" @click.stop="addToCart(product)" :product="product" :id="product.id">
       add to cart
     </button>
   </div>

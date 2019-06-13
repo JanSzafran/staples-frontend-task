@@ -42,7 +42,7 @@ import FooterComponent from '../components/FooterComponent';
 export default {
 
   name: 'cart',
-  props: ['id'],
+  props: ['product', 'id'],
   components: {
     Modal,
     FooterComponent,
@@ -54,8 +54,6 @@ export default {
   },
   methods: {
     decreaseQuantity(product) {
-      if (this.product.quantity < 1) { return; }
-
       this.$store.dispatch('decreaseQuantity', product);
     },
     increaseQuantity(product) {

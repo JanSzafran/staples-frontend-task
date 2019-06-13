@@ -43,8 +43,6 @@ export default {
   },
   methods: {
     decreaseQuantity() {
-      if (this.product.quantity < 1) { return; }
-
       this.itemQuantity = this.itemQuantity - 1;
     },
     increaseQuantity() {

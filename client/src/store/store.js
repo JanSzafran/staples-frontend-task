@@ -35,15 +35,11 @@ const store = {
       dispatch('changeProductQuantityInCart');
     },
     increaseQuantity({ dispatch, getters }, product) {
-      if (product.quantity < 1) { return; }
-
       const found = getters.cart.find(element => element.id === product.id);
       found.quantity += 1;
       dispatch('changeProductQuantityInCart');
     },
     addToCart({ commit, getters, dispatch }, product) {
-      if (product.quantity < 1) { return; }
-
       const found = getters.cart.find(element => element.id === product.id);
       if (found) {
         found.quantity += product.quantity;
