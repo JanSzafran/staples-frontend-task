@@ -10,7 +10,7 @@
         <div class="container w-full">
             <div class="flex justify-around flex-wrap overflow-hidden md:-mx-1 lg:-mx-1 xl:-mx-1">
                 <Item
-                    v-for="(item, index) in products" :key="`apiKey-${index}`"
+                    v-for="(item, index) in products.results" :key="`apiKey-${index}`"
                     :product="item"
                     :id="item.id"
                     :name="item.general.name"
@@ -53,7 +53,7 @@ export default {
   },
   methods: {
     fetchData() {
-      const baseUrl = `http://localhost:3005/products?_page=${this.pageCounter}&_limit=20/&q=${this.keywords}`;
+      const baseUrl = 'http://localhost:8000/products/list/?page=${this.pageCounter}';
       this.$http.get(baseUrl)
         .then((result) => {
           this.products = result.data;
