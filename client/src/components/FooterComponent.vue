@@ -1,6 +1,6 @@
 <template>
     <div class="footer">
-        <p>Made with <i class="far fa-heart"></i> by Jan Szafran & Maciej Choromański</p>
+        <p>Made with <i class="far fa-heart"></i> by Jan Szafran</p>
     </div>
 </template>
 
